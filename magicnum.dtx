@@ -1,7 +1,7 @@
 % \iffalse meta-comment
 %
 % File: magicnum.dtx
-% Version: 2019/07/25 v1.6
+% Version: 2019/12/15 v1.7
 % Info: Magic numbers
 %
 % Copyright (C)
@@ -86,7 +86,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: magicnum 2019/07/25 v1.6 Magic numbers (HO)}
+\Msg{* Package: magicnum 2019/12/15 v1.7 Magic numbers (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -98,7 +98,7 @@
 This is a generated file.
 
 Project: magicnum
-Version: 2019/07/25 v1.6
+Version: 2019/12/15 v1.7
 
 Copyright (C)
    2007, 2009-2011 Heiko Oberdiek
@@ -187,7 +187,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{magicnum.drv}%
-  [2019/07/25 v1.6 Magic numbers (HO)]%
+  [2019/12/15 v1.7 Magic numbers (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \usepackage{array}
@@ -217,7 +217,7 @@ and the derived files
 % \GetFileInfo{magicnum.drv}
 %
 % \title{The \xpackage{magicnum} package}
-% \date{2019/07/25 v1.6}
+% \date{2019/12/15 v1.7}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/magicnum/issues}}}
 %
@@ -512,7 +512,7 @@ and the derived files
   \fi
 \expandafter\x\csname ver@magicnum.sty\endcsname
 \ProvidesPackage{magicnum}%
-  [2019/07/25 v1.6 Magic numbers (HO)]%
+  [2019/12/15 v1.7 Magic numbers (HO)]%
 %    \end{macrocode}
 %
 % \subsection{Catcodes}
@@ -648,7 +648,7 @@ and the derived files
     require("magicnum")%
   }%
   \begingroup
-    \def\x{2019/07/25 v1.6}%
+    \def\x{2019/12/15 v1.7}%
     \def\StripPrefix#1>{}%
     \edef\x{\expandafter\StripPrefix\meaning\x}%
     \edef\y{%
@@ -932,7 +932,7 @@ oberdiek.magicnum = magicnum
 %    \end{macrocode}
 %    \begin{macrocode}
 function magicnum.getversion()
-  tex.write("2019/07/25 v1.6")
+  tex.write("2019/12/15 v1.7")
 end
 %    \end{macrocode}
 %    \begin{macrocode}
@@ -1535,6 +1535,10 @@ end
 %     remove uses of module function, see PR70
 %   \end{Version}
 
+%   \begin{Version}{2019/12/15 v1.7}
+%   \item
+%     Documentation updates.
+%   \end{Version}
 % \end{History}
 %
 % \PrintIndex
