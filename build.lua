@@ -6,9 +6,16 @@ module = "magicnum"
 textfiles = {"README.md"}
 unpackfiles = {'magicnum.dtx'}
 sourcefiles={"*.dtx"}
-installfiles={"*.sty","*.lua"}
+installfiles={"*.sty","*.lua","*.txt"}
 scriptfiles={"*.lua"}
 
+tdslocations={
+"doc/latex/oberdiek/magicnum.pdf",
+"doc/latex/oberdiek/magicnum.txt",
+"scripts/oberdiek/magicnum.lua",
+"source/latex/oberdiek/magicnum.dtx",
+"tex/generic/oberdiek/magicnum.sty"
+}
  
 packtdszip  = true
 
