@@ -7,7 +7,7 @@
 % Copyright (C)
 %    2007, 2009-2011 Heiko Oberdiek
 %    2016-2019 Oberdiek Package Support Group, 2019
-%    https://github.com/ho-tex/oberdiek/issues
+%    https://github.com/ho-tex/magicnum/issues
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
@@ -23,7 +23,7 @@
 %
 % The Current Maintainers of this work are
 % Heiko Oberdiek and the Oberdiek Package Support Group
-% https://github.com/ho-tex/oberdiek/issues
+% https://github.com/ho-tex/magicnum/issues
 %
 % The Base Interpreter refers to any `TeX-Format',
 % because some files are installed in TDS:tex/generic//.
@@ -32,11 +32,11 @@
 % and the derived files
 %    magicnum.sty, magicnum.pdf, magicnum.ins, magicnum.drv, magicnum.txt,
 %    magicnum-test1.tex, magicnum-test2.tex, magicnum-test3.tex,
-%    magicnum-test4.tex, magicnum.lua, oberdiek.magicnum.lua.
+%    magicnum-test4.tex, magicnum.lua.
 %
 % Distribution:
-%    CTAN:macros/latex/contrib/oberdiek/magicnum.dtx
-%    CTAN:macros/latex/contrib/oberdiek/magicnum.pdf
+%    CTAN:macros/latex/contrib/magicnum/magicnum.dtx
+%    CTAN:macros/latex/contrib/magicnum/magicnum.pdf
 %
 % Unpacking:
 %    (a) If magicnum.ins is present:
@@ -65,16 +65,11 @@
 %       pdflatex magicnum.dtx
 %
 % Installation:
-%    TDS:tex/generic/oberdiek/magicnum.sty
-%    TDS:scripts/oberdiek/magicnum.lua
-%    TDS:scripts/oberdiek/oberdiek.magicnum.lua
-%    TDS:doc/latex/oberdiek/magicnum.pdf
-%    TDS:doc/latex/oberdiek/magicnum.txt
-%    TDS:doc/latex/oberdiek/test/magicnum-test1.tex
-%    TDS:doc/latex/oberdiek/test/magicnum-test2.tex
-%    TDS:doc/latex/oberdiek/test/magicnum-test3.tex
-%    TDS:doc/latex/oberdiek/test/magicnum-test4.tex
-%    TDS:source/latex/oberdiek/magicnum.dtx
+%    TDS:tex/generic/magicnum/magicnum.sty
+%    TDS:scripts/magicnum/magicnum.lua
+%    TDS:doc/latex/magicnum/magicnum.pdf
+%    TDS:doc/latex/magicnum/magicnum.txt
+%    TDS:source/latex/magicnum/magicnum.dtx
 %
 %<*ignore>
 \begingroup
@@ -123,7 +118,7 @@ This work has the LPPL maintenance status "maintained".
 
 The Current Maintainers of this work are
 Heiko Oberdiek and the Oberdiek Package Support Group
-https://github.com/ho-tex/oberdiek/issues
+https://github.com/ho-tex/magicnum/issues
 
 
 The Base Interpreter refers to any `TeX-Format',
@@ -131,9 +126,7 @@ because some files are installed in TDS:tex/generic//.
 
 This work consists of the main source file magicnum.dtx
 and the derived files
-   magicnum.sty, magicnum.pdf, magicnum.ins, magicnum.drv, magicnum.txt,
-   magicnum-test1.tex, magicnum-test2.tex, magicnum-test3.tex,
-   magicnum-test4.tex, magicnum.lua, oberdiek.magicnum.lua.
+   magicnum.sty, magicnum.pdf, magicnum.txt, magicnum.lua.
 
 \endpreamble
 \let\MetaPrefix\DoubleperCent
@@ -141,18 +134,18 @@ and the derived files
 \generate{%
   \file{magicnum.ins}{\from{magicnum.dtx}{install}}%
   \file{magicnum.drv}{\from{magicnum.dtx}{driver}}%
-  \usedir{tex/generic/oberdiek}%
+  \usedir{tex/generic/magicnum}%
   \file{magicnum.sty}{\from{magicnum.dtx}{package}}%
-%  \usedir{doc/latex/oberdiek/test}%
+%  \usedir{doc/latex/magicnum/test}%
 %  \file{magicnum-test1.tex}{\from{magicnum.dtx}{test1}}%
 %  \file{magicnum-test2.tex}{\from{magicnum.dtx}{testplain,testdata}}%
 %  \file{magicnum-test3.tex}{\from{magicnum.dtx}{testlatex,testdata}}%
 %  \file{magicnum-test4.tex}{\from{magicnum.dtx}{test4}}%
   \nopreamble
   \nopostamble
-  \usedir{doc/latex/oberdiek}%
+  \usedir{doc/latex/magicnum}%
   \file{magicnum.txt}{\from{magicnum.dtx}{data}}%
-%  \usedir{source/latex/oberdiek/catalogue}%
+%  \usedir{source/latex/magicnum/catalogue}%
 %  \file{magicnum.xml}{\from{magicnum.dtx}{catalogue}}%
 }
 \def\MetaPrefix{-- }
@@ -162,9 +155,8 @@ and the derived files
 }
 \def\currentpostamble{\defaultpostamble}%
 \generate{%
-  \usedir{scripts/oberdiek}%
+  \usedir{scripts/magicnum}%
   \file{magicnum.lua}{\from{magicnum.dtx}{lua}}%
-  \file{oberdiek.magicnum.lua}{\from{magicnum.dtx}{lua}}%
 }
 
 \catcode32=13\relax% active space
@@ -176,9 +168,9 @@ and the derived files
 \Msg{*}
 \Msg{*     magicnum.sty}
 \Msg{*}
-\Msg{* And install the following script files:}
+\Msg{* And install the following script file:}
 \Msg{*}
-\Msg{*     magicnum.lua, oberdiek.magicnum.lua}
+\Msg{*     magicnum.lua}
 \Msg{*}
 \Msg{* To produce the documentation run the file `magicnum.drv'}
 \Msg{* through LaTeX.}
@@ -227,7 +219,7 @@ and the derived files
 % \title{The \xpackage{magicnum} package}
 % \date{2019/07/25 v1.6}
 % \author{Heiko Oberdiek\thanks
-% {Please report any issues at \url{https://github.com/ho-tex/oberdiek/issues}}}
+% {Please report any issues at \url{https://github.com/ho-tex/magicnum/issues}}}
 %
 % \maketitle
 %
@@ -1350,17 +1342,17 @@ end
 % \paragraph{Package.} This package is available on
 % CTAN\footnote{\CTANpkg{magicnum}}:
 % \begin{description}
-% \item[\CTAN{macros/latex/contrib/oberdiek/magicnum.dtx}] The source file.
-% \item[\CTAN{macros/latex/contrib/oberdiek/magicnum.pdf}] Documentation.
+% \item[\CTAN{macros/latex/contrib/magicnum/magicnum.dtx}] The source file.
+% \item[\CTAN{macros/latex/contrib/magicnum/magicnum.pdf}] Documentation.
 % \end{description}
 %
 %
-% \paragraph{Bundle.} All the packages of the bundle `oberdiek'
+% \paragraph{Bundle.} All the packages of the bundle `magicnum'
 % are also available in a TDS compliant ZIP archive. There
 % the packages are already unpacked and the documentation files
 % are generated. The files and directories obey the TDS standard.
 % \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/oberdiek.tds.zip}]
+% \item[\CTANinstall{install/macros/latex/contrib/magicnum.tds.zip}]
 % \end{description}
 % \emph{TDS} refers to the standard ``A Directory Structure
 % for \TeX\ Files'' (\CTAN{tds/tds.pdf}). Directories
@@ -1368,15 +1360,15 @@ end
 %
 % \subsection{Bundle installation}
 %
-% \paragraph{Unpacking.} Unpack the \xfile{oberdiek.tds.zip} in the
+% \paragraph{Unpacking.} Unpack the \xfile{magicnum.tds.zip} in the
 % TDS tree (also known as \xfile{texmf} tree) of your choice.
 % Example (linux):
 % \begin{quote}
-%   |unzip oberdiek.tds.zip -d ~/texmf|
+%   |unzip magicnum.tds.zip -d ~/texmf|
 % \end{quote}
 %
 % \paragraph{Script installation.}
-% Check the directory \xfile{TDS:scripts/oberdiek/} for
+% Check the directory \xfile{TDS:scripts/magicnum/} for
 % scripts that need further installation steps.
 %
 % \subsection{Package installation}
@@ -1394,16 +1386,12 @@ end
 % \begin{quote}
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
-%   magicnum.sty & tex/generic/oberdiek/magicnum.sty\\
-%   magicnum.lua & scripts/oberdiek/magicnum.lua\\
-%   oberdiek.magicnum.lua & scripts/oberdiek/oberdiek.magicnum.lua\\
-%   magicnum.pdf & doc/latex/oberdiek/magicnum.pdf\\
-%   magicnum.txt & doc/latex/oberdiek/magicnum.txt\\
-%   test/magicnum-test1.tex & doc/latex/oberdiek/test/magicnum-test1.tex\\
-%   test/magicnum-test2.tex & doc/latex/oberdiek/test/magicnum-test2.tex\\
-%   test/magicnum-test3.tex & doc/latex/oberdiek/test/magicnum-test3.tex\\
-%   test/magicnum-test4.tex & doc/latex/oberdiek/test/magicnum-test4.tex\\
-%   magicnum.dtx & source/latex/oberdiek/magicnum.dtx\\
+%   magicnum.sty & tex/generic/magicnum/magicnum.sty\\
+%   magicnum.lua & scripts/magicnum/magicnum.lua\\
+%   magicnum.magicnum.lua & scripts/magicnum/magicnum.magicnum.lua\\
+%   magicnum.pdf & doc/latex/magicnum/magicnum.pdf\\
+%   magicnum.txt & doc/latex/magicnum/magicnum.txt\\
+%   magicnum.dtx & source/latex/magicnum/magicnum.dtx\\
 % \end{tabular}^^A
 % }^^A
 % \sbox0{\t}^^A
