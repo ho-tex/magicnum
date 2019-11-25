@@ -10,11 +10,11 @@ installfiles={"*.sty","*.lua","*.txt"}
 scriptfiles={"*.lua"}
 
 tdslocations={
-"doc/latex/oberdiek/magicnum.pdf",
-"doc/latex/oberdiek/magicnum.txt",
-"scripts/oberdiek/magicnum.lua",
-"source/latex/oberdiek/magicnum.dtx",
-"tex/generic/oberdiek/magicnum.sty"
+"doc/latex/magicnum/magicnum.pdf",
+"doc/latex/magicnum/magicnum.txt",
+"scripts/magicnum/magicnum.lua",
+"source/latex/magicnum/magicnum.dtx",
+"tex/generic/magicnum/magicnum.sty"
 }
  
 packtdszip  = true
