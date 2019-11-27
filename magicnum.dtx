@@ -625,10 +625,10 @@ and the derived files
 %    \begin{macrocode}
   \begingroup\expandafter\expandafter\expandafter\endgroup
   \expandafter\ifx\csname RequirePackage\endcsname\relax
-    \input ifluatex.sty\relax
+    \input tex.sty\relax
     \input infwarerr.sty\relax
   \else
-    \RequirePackage{ifluatex}[2010/03/01]%
+    \RequirePackage{iftex}[2019/11/07]%
     \RequirePackage{infwarerr}[2010/04/08]%
   \fi
 %    \end{macrocode}
@@ -1537,6 +1537,8 @@ end
 %   \begin{Version}{2019/12/15 v1.7}
 %   \item
 %     Documentation updates.
+%   \item
+%     Use \xpackage{iftex} directly.
 %   \end{Version}
 % \end{History}
 %
